@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#101C2D"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="22dp">
+
+        <!-- NOME DELL'APPLICAZIONE -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="SCAMWISE"
+            android:textColor="#FFFFFF"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.08"
+            android:gravity="center"
+            android:layout_marginTop="15dp"/>
+
+        <!-- SOTTOTITOLO -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Prototipo"
+            android:textColor="#8DA7C3"
+            android:textSize="12sp"
+            android:gravity="center"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="25dp"/>
+
+        <!-- PUNTEGGIO -->
+        <TextView
+            android:id="@+id/scoreText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="YOUR SCORE: 0 XP"
+            android:textColor="#6CF0B2"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:background="#1D3048"
+            android:padding="18dp"
+            android:gravity="center"
+            android:layout_marginBottom="25dp"/>
+
+        <!-- NUMERO DELLA DOMANDA -->
+        <TextView
+            android:id="@+id/questionNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="MISSION 01 / 03"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- CATEGORIA -->
+        <TextView
+            android:id="@+id/categoryText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PHISHING"
+            android:textColor="#FFD166"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:background="#34465E"
+            android:padding="10dp"
+            android:layout_marginBottom="15dp"/>
+
+        <!-- RIQUADRO DEL MESSAGGIO -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#1D3048"
+            android:padding="18dp"
+            android:layout_marginBottom="22dp">
+
+            <!-- MITTENTE -->
+            <TextView
+                android:id="@+id/senderText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Your Bank"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="12dp"/>
+
+            <!-- TESTO DEL MESSAGGIO -->
+            <TextView
+                android:id="@+id/messageText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Your account has been blocked!"
+                android:textColor="#D7E3EF"
+                android:textSize="16sp"
+                android:lineSpacingExtra="5dp"/>
+
+            <!-- LINK DIMOSTRATIVO -->
+            <TextView
+                android:id="@+id/linkText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="suspicious-link.example.test"
+                android:textColor="#79A9DF"
+                android:textSize="13sp"
+                android:layout_marginTop="15dp"/>
+        </LinearLayout>
+
+        <!-- DOMANDA -->
+        <TextView
+            android:id="@+id/questionText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Is this message a scam?"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginBottom="18dp"/>
+
+        <!-- PULSANTE TRUFFA -->
+        <Button
+            android:id="@+id/scamButton"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="IT'S A SCAM"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:backgroundTint="#167A55"
+            android:onClick="onScamClick"
+            android:layout_marginBottom="12dp"/>
+
+        <!-- PULSANTE SICURO -->
+        <Button
+            android:id="@+id/safeButton"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="IT'S SAFE"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:backgroundTint="#34465E"
+            android:onClick="onSafeClick"/>
+
+        <!-- RISPOSTA E SPIEGAZIONE -->
+        <TextView
+            android:id="@+id/feedbackText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="#6CF0B2"
+            android:textSize="15sp"
+            android:gravity="center"
+            android:lineSpacingExtra="5dp"
+            android:background="#1D3048"
+            android:padding="15dp"
+            android:layout_marginTop="20dp"
+            android:visibility="gone"/>
+
+        <!-- PULSANTE PROSSIMA DOMANDA -->
+        <Button
+            android:id="@+id/nextButton"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="NEXT QUESTION"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:backgroundTint="#2875B8"
+            android:onClick="onNextClick"
+            android:layout_marginTop="15dp"
+            android:visibility="gone"/>
+
+        <!-- PIEDE DELL'APP -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="SCAMWISE - LEARN TO STAY SAFE"
+            android:textColor="#71869E"
+            android:textSize="11sp"
+            android:gravity="center"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="15dp"/>
+
+    </LinearLayout>
+
+</ScrollView>
